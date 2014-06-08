@@ -35,11 +35,7 @@ web site</a>:
 
 ## Loading the data
 
-
-
-
-
-When loading the dataset into R, please consider the following:
+When loading the dataset into R, use script readDataIn.R:
 
 * The dataset has 2,075,259 rows and 9 columns. First
 calculate a rough estimate of how much memory the dataset will require
@@ -51,9 +47,7 @@ memory (most modern computers should be fine).
 rather than reading in the entire dataset and subsetting to those
 dates.
 
-* You may find it useful to convert the Date and Time variables to
-Date/Time classes in R using the `strptime()` and `as.Date()`
-functions.
+* The date and time fields were converted by using the package lubridate.
 
 * Note that in this dataset missing values are coded as `?`.
 
@@ -71,8 +65,8 @@ First you will need to fork and clone the following GitHub repository:
 
 For each plot you should
 
-* Construct the plot and save it to a PNG file with a width of 480
-pixels and a height of 480 pixels.
+* Construct the plot and save it to a PNG file with a width of 504
+pixels and a height of 504 pixels.
 
 * Name each of the plot files as `plot1.png`, `plot2.png`, etc.
 

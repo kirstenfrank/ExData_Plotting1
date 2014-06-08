@@ -1,5 +1,5 @@
 readDataIn<-function() {
-    temp<-read.table("household_power_consumption.txt",sep=";", header=TRUE,stringsAsFactor=FALSE)
+    temp<-read.table("/Users/kirsten/Git-local/household_power_consumption.txt",sep=";", header=TRUE,stringsAsFactor=FALSE)
     data<-subset(temp, temp$Date=="1/2/2007" | temp$Date=="2/2/2007")
     ## These are French (European) style dates with the day of month first and the month second.
     library("lubridate")
