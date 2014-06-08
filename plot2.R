@@ -1,5 +1,5 @@
 makeplot2<-function(data=newdata) {
-    png(file="myplot2.png", bg="transparent", width=7, height=7, units="in", res=72)
+    png(file="plot2.png", bg="transparent", width=7, height=7, units="in", res=72)
     ## Open the PNG device directly.
     plot(data$datetime, data$Global_active_power, type="l",
          xlab="",

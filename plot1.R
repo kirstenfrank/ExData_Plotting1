@@ -1,6 +1,6 @@
-makeHistogram<-function(data=newdata) {
+makeplot1<-function(data=newdata) {
     ## Use the PNG device directly.
-    png(file="myHist.png", bg="transparent", width=7, height=7, units="in", res=72)
+    png(file="plot1.png", bg="transparent", width=7, height=7, units="in", res=72)
     hist(data$Global_active_power, 
          col = "red", main="Global Active Power",
          ylab="Frequency", xlab="Global Active Power (kilowatts)",xaxt="n")
