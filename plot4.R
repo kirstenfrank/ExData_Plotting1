@@ -1,7 +1,7 @@
 makeplot4<-function(data=newdata) {
     png(file="plot4.png", bg="transparent", width=7, height=7, units="in", res=72)
     opar<-par(no.readonly = TRUE) # Save the original parameters.
-    par("mfrow"=c(2,2))
+    par("mfrow"=c(2,2))  # Set to have 4 plots, two per row for two rows.
     # First upper left plot.
     plot(data$datetime, data$Global_active_power, type="l",
          xlab="",
@@ -16,10 +16,10 @@ makeplot4<-function(data=newdata) {
          xlab="",
          ## Remove a label on the X axis
          ylab="Energy sub metering", yaxt="n", ylim=c(0,38))
-    par(new=TRUE)
+    par(new=TRUE)   # This allows for overlaying. Y axis limits must match.
     plot(data$datetime, data$Sub_metering_2, xlab="", ylab="", type = "l", 
          col="red", yaxt="n", ylim=c(0,38)) 
-    par(new=TRUE)
+    par(new=TRUE)   #This is for overlaying. Note that the y axis limits must be set (and match).
     plot(data$datetime, data$Sub_metering_3, xlab="", ylab="", type = "l", 
          col="blue", yaxt="n", ylim=c(0,38)) 
     legend("topright", 
